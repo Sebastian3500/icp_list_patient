@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icp_list_patient_backend": {
+      "main": "src/icp_list_patient_backend/main.mo",
+      "type": "motoko"
+    },
+    "icp_list_patient_frontend": {
+      "dependencies": [
+        "icp_list_patient_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_list_patient_frontend/src/index.html"
+      },
+      "source": [
+        "src/icp_list_patient_frontend/assets",
+        "dist/icp_list_patient_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
